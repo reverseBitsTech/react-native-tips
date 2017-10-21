@@ -57,9 +57,9 @@ class Button extends Component {
 
 
 
+
+
 ### De structuring of objects
-
-
 
 #### At component level
 
@@ -93,7 +93,7 @@ const styles = {
 
 And now you want to access these both at some place, then use de structuring of objects so instead of writing like this :
 
-```
+```jsx
 <View style={this.styles.viewStyle}>
 
      <Text style={this.styles.textStyle}> {props.headerText} </Text>
@@ -103,13 +103,13 @@ And now you want to access these both at some place, then use de structuring of 
 
 1.  First make a different constant
 
-    ```
+    ```jsx
     const { textStyle, viewStyle } = styles;
     ```
 
 2.  Use it directly this way, 
 
-    ```
+    ```jsx
     <View style={viewStyle}>
 
         <Text style={textStyle}> {props.headerText} </Text>
@@ -137,24 +137,57 @@ There will be certain times when you have lot of reusable components in your app
 
 3.  **export** it as **an object**.
 
-    ```
+    ```jsx
     export { Component}
     ```
 
 4.  Inside index.js file what we simply do is **import all the components in same directory and immediately export them**. but with different syntax:
 
-    ```
+    ```jsx
     export * from './Button';
     export * from './Card';
     ```
 
 5.  Now **whenever you write directory path** in which **any index.js file exists** then it will **by default load data from index file**. That's why we called it index 1st place.
 
-    ```
+    ```jsx
     import { Card, CardSection, Button, Input, Spinner } from './common'
     ```
 
     ​
 
+### Declaring functional components in different ways...
 
+This below codes are same, You can create components this way
+
+#### 1. Return should be in same line if One Line is gonna return
+
+```jsx
+const App = () => {
+  return <Text> Swesome </Text>
+}
+```
+
+
+
+#### 2. You can omit return statement if only single component is a return
+
+```jsx
+const App = () => (
+  <View> </View> 
+)
+```
+
+
+
+#### 3. Full declaration, here returned items are mostly multiple
+
+```jsx
+const App = () => {
+  return (    
+     <Text> 2nd Way </Text>
+     <Text> 3rd Way </Text>
+  );
+}
+```
 
