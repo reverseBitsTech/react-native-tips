@@ -4,7 +4,7 @@
 
 ### Uses of components: functional, class components
 
-#### Functional components 
+#### Functional components
 
 When you **just wants to return some JSX** from a component then use functional level component
 
@@ -121,7 +121,7 @@ This makes code lot **more readable and clean** ;)
 
 
 
-####  At files level
+#### At files level
 
 There will be certain times when you have lot of reusable components in your app, de structuring can save lot lines of code here.
 
@@ -191,3 +191,10 @@ const App = () => {
 }
 ```
 
+
+
+### Redux - Simplest understanding...
+
+4 things to understand
+
+state, Reducer, Action and 
