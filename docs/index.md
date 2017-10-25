@@ -2,7 +2,7 @@
 
 
 
-### Uses of components: functional, class components
+## Uses of components: functional, class components
 
 #### Functional components
 
@@ -12,13 +12,9 @@ Example:
 
 ```jsx
 const Button = () => {	
-
-     return(
-
+	return(
         <View> click me </View>
-
      );
-
 }
 ```
 
@@ -30,28 +26,18 @@ when you wants to use **lifecycle methods and and do complex things** with state
 
 ```jsx
 class Button extends Component {
-
  		 // A react lifecycle method...
   		 componentWillMount() {
        		//Here do something relative...
    		 }
-  
-        render() {
-
+       render() {
         return (
-
             <View>
-
-                <Text>
-
+              <Text>
                 </Text>
-
             </View>
-
         );
-
     }
-
 }
 ```
 
@@ -59,7 +45,7 @@ class Button extends Component {
 
 
 
-### De structuring of objects
+## De structuring of objects
 
 #### At component level
 
@@ -67,27 +53,16 @@ Whenever you **want to fetch multiple things from a JS object** like you have mu
 
 ```jsx
 const styles = {
-
     viewStyle: {
-
         backgroundColor: '#F8F8F8',
-
         justifyContent: 'center',
-
         alignItems: 'center',
-
         elevation: 8,
-
         position: 'relative'
-
     },
-
     textStyle: {
-
         fontSize: 20
-
     }
-
 }
 ```
 
@@ -95,9 +70,7 @@ And now you want to access these both at some place, then use de structuring of 
 
 ```jsx
 <View style={this.styles.viewStyle}>
-
      <Text style={this.styles.textStyle}> {props.headerText} </Text>
-
 </View>
 ```
 
@@ -111,9 +84,7 @@ And now you want to access these both at some place, then use de structuring of 
 
     ```jsx
     <View style={viewStyle}>
-
         <Text style={textStyle}> {props.headerText} </Text>
-
     </View>
     ```
 
@@ -156,11 +127,11 @@ There will be certain times when you have lot of reusable components in your app
 
     ​
 
-### Declaring functional components in different ways...
+## Declaring functional components in different ways...
 
 This below codes are same, You can create components this way
 
-#### 1. Return should be in same line if One Line is gonna return
+#### Return should be in same line if One Line is gonna return
 
 ```jsx
 const App = () => {
@@ -170,7 +141,7 @@ const App = () => {
 
 
 
-#### 2. You can omit return statement if only single component is a return
+#### You can omit return statement if only single component is a return
 
 ```jsx
 const App = () => (
@@ -180,7 +151,7 @@ const App = () => (
 
 
 
-#### 3. Full declaration, here returned items are mostly multiple
+#### Full declaration, here returned items are mostly multiple
 
 ```jsx
 const App = () => {
@@ -193,7 +164,7 @@ const App = () => {
 
 
 
-### Redux - Simplest understanding...
+## Redux - Simplest understanding...
 
 4 things to understand
 

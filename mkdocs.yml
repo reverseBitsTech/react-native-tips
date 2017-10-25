@@ -1,2 +1,15 @@
 site_name: React native important lessons
 theme: 'material'
+extra:
+  palette:
+    primary: 'teal'
+    accent: 'indigo'
+  social:
+    - type: 'gitlab'
+      link: 'https://gitlab.com/reverseBitsTech'
+    - type: 'twitter'
+      link: 'https://twitter.com/reverseBitsTech'
+    - type: 'linkedin'
+      link: 'https://in.linkedin.com/in/reversebits-tech-473757131'
+    - type: 'medium'
+      link: 'https://blog.reversebits.tech'
