@@ -171,10 +171,18 @@ There are **4 things** to learn
 
 1.  **State**: Application's Data.
 2.  **Action**: Plain JavaScript object that tells reducer how to modify the data [State].
-3.  **Reduce** : The function that takes the action and make changes in State.
+3.  **Reducer** : The function that takes the action and make changes in State.
 4.  **Store** : It holds a reference to State and Reducer.
 
-//put images here
+
+
+![alt text](/def.png)
+
+**Example** 
+
+![](/example.png)
+
+
 
 ```
 /*
