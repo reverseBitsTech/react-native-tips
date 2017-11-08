@@ -1,0 +1,69 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Important Lessons learned while learning React Native\n\n\nUses of components: functional, class components\n\n\nFunctional components\n\n\nWhen you \njust wants to return some JSX\n from a component then use functional level component\n\n\nExample:\n\n\nconst Button = () => {  \n    return(\n        <View> click me </View>\n     );\n}\n\n\n\n\nLike here we don't perform any operation other than returning a View.\n\n\nClass level components\n\n\nwhen you wants to use \nlifecycle methods and and do complex things\n with states, prefer class level components as they are more powerful.\n\n\nclass Button extends Component {\n         // A react lifecycle method...\n         componentWillMount() {\n            //Here do something relative...\n         }\n       render() {\n        return (\n            <View>\n              <Text>\n                </Text>\n            </View>\n        );\n    }\n}\n\n\n\n\nDe structuring of objects\n\n\nAt component level\n\n\nWhenever you \nwant to fetch multiple things from a JS object\n like you have multiple styles defined inside styles object:\n\n\nconst styles = {\n    viewStyle: {\n        backgroundColor: '#F8F8F8',\n        justifyContent: 'center',\n        alignItems: 'center',\n        elevation: 8,\n        position: 'relative'\n    },\n    textStyle: {\n        fontSize: 20\n    }\n}\n\n\n\n\nAnd now you want to access these both at some place, then use de structuring of objects so instead of writing like this :\n\n\n<View style={this.styles.viewStyle}>\n     <Text style={this.styles.textStyle}> {props.headerText} </Text>\n</View>\n\n\n\n\n\n\n\n\nFirst make a different constant\n\n\njsx\nconst { textStyle, viewStyle } = styles;\n\n\n\n\n\n\nUse it directly this way, \n\n\njsx\n<View style={viewStyle}>\n    <Text style={textStyle}> {props.headerText} </Text>\n</View>\n\n\n\n\n\n\nThis makes code lot \nmore readable and clean\n ;)\n\n\nAt files level\n\n\nThere will be certain times when you have lot of reusable components in your app, de structuring can save lot lines of code here.\n\n\nSTEPS\n\n\n\n\n\n\nMake a common directory/package\n for all re-usable components and \ncreate an index.js file\n inside that directory.\n\n\n\n\n\n\nNow for each component instead of exporting it like this \n\n\njsx\nexport default component\n\n\n\n\n\n\nexport\n it as \nan object\n.\n\n\njsx\nexport { Component}\n\n\n\n\n\n\nInside index.js file what we simply do is \nimport all the components in same directory and immediately export them\n. but with different syntax:\n\n\njsx\nexport * from './Button';\nexport * from './Card';\n\n\n\n\n\n\nNow \nwhenever you write directory path\n in which \nany index.js file exists\n then it will \nby default load data from index file\n. That's why we called it index 1st place.\n\n\njsx\nimport { Card, CardSection, Button, Input, Spinner } from './common'\n\n\n\u200b\n\n\n\n\n\n\nDeclaring functional components in different ways...\n\n\nThis below codes are same, You can create components this way\n\n\nReturn should be in same line if One Line is gonna return\n\n\nconst App = () => {\n  return <Text> Swesome </Text>\n}\n\n\n\n\nYou can omit return statement if only single component is a return\n\n\nconst App = () => (\n  <View> </View> \n)\n\n\n\n\nFull declaration, here returned items are mostly multiple\n\n\nconst App = () => {\n  return (    \n     <Text> 2nd Way </Text>\n     <Text> 3rd Way </Text>\n  );\n}\n\n\n\n\nRedux - Simplest understanding...\n\n\nThere are \n4 things\n to learn\n\n\n\n\nState\n: Application's Data.\n\n\nAction\n: Plain JavaScript object that tells reducer how to modify the data [State].\n\n\nReduce\n : The function that takes the action and make changes in State.\n\n\nStore\n : It holds a reference to State and Reducer.\n\n\n\n\n//put images here\n\n\n/*\n    First we created a reducer, there are 2 arguments we pass\n    1> state is the previous state we got while running reducer \n    2> action is the actual action object\n*/\nconst reducer = (state = [], action) => {\n  if(action === 'split_string'){\n    return action.payload.split('');\n  }\n  return state;\n}\n\n//We need to pass reducer to the store.\nconst store = Redux.createStore(reducer);\n\n//This is the action which must have property type\nconst action = {\n  type : 'split_string',\n  payload : 'reverseBits'\n}\n\n//We need to pass this action to the store\nstore.dispatch(action);\n\n//Any time you write this it will return current state.\nstore.getState();",
+            "title": "Home"
+        },
+        {
+            "location": "/#important-lessons-learned-while-learning-react-native",
+            "text": "",
+            "title": "Important Lessons learned while learning React Native"
+        },
+        {
+            "location": "/#uses-of-components-functional-class-components",
+            "text": "",
+            "title": "Uses of components: functional, class components"
+        },
+        {
+            "location": "/#functional-components",
+            "text": "When you  just wants to return some JSX  from a component then use functional level component  Example:  const Button = () => {  \n    return(\n        <View> click me </View>\n     );\n}  Like here we don't perform any operation other than returning a View.",
+            "title": "Functional components"
+        },
+        {
+            "location": "/#class-level-components",
+            "text": "when you wants to use  lifecycle methods and and do complex things  with states, prefer class level components as they are more powerful.  class Button extends Component {\n         // A react lifecycle method...\n         componentWillMount() {\n            //Here do something relative...\n         }\n       render() {\n        return (\n            <View>\n              <Text>\n                </Text>\n            </View>\n        );\n    }\n}",
+            "title": "Class level components"
+        },
+        {
+            "location": "/#de-structuring-of-objects",
+            "text": "",
+            "title": "De structuring of objects"
+        },
+        {
+            "location": "/#at-component-level",
+            "text": "Whenever you  want to fetch multiple things from a JS object  like you have multiple styles defined inside styles object:  const styles = {\n    viewStyle: {\n        backgroundColor: '#F8F8F8',\n        justifyContent: 'center',\n        alignItems: 'center',\n        elevation: 8,\n        position: 'relative'\n    },\n    textStyle: {\n        fontSize: 20\n    }\n}  And now you want to access these both at some place, then use de structuring of objects so instead of writing like this :  <View style={this.styles.viewStyle}>\n     <Text style={this.styles.textStyle}> {props.headerText} </Text>\n</View>    First make a different constant  jsx\nconst { textStyle, viewStyle } = styles;    Use it directly this way,   jsx\n<View style={viewStyle}>\n    <Text style={textStyle}> {props.headerText} </Text>\n</View>    This makes code lot  more readable and clean  ;)",
+            "title": "At component level"
+        },
+        {
+            "location": "/#at-files-level",
+            "text": "There will be certain times when you have lot of reusable components in your app, de structuring can save lot lines of code here.  STEPS    Make a common directory/package  for all re-usable components and  create an index.js file  inside that directory.    Now for each component instead of exporting it like this   jsx\nexport default component    export  it as  an object .  jsx\nexport { Component}    Inside index.js file what we simply do is  import all the components in same directory and immediately export them . but with different syntax:  jsx\nexport * from './Button';\nexport * from './Card';    Now  whenever you write directory path  in which  any index.js file exists  then it will  by default load data from index file . That's why we called it index 1st place.  jsx\nimport { Card, CardSection, Button, Input, Spinner } from './common'  \u200b",
+            "title": "At files level"
+        },
+        {
+            "location": "/#declaring-functional-components-in-different-ways",
+            "text": "This below codes are same, You can create components this way",
+            "title": "Declaring functional components in different ways..."
+        },
+        {
+            "location": "/#return-should-be-in-same-line-if-one-line-is-gonna-return",
+            "text": "const App = () => {\n  return <Text> Swesome </Text>\n}",
+            "title": "Return should be in same line if One Line is gonna return"
+        },
+        {
+            "location": "/#you-can-omit-return-statement-if-only-single-component-is-a-return",
+            "text": "const App = () => (\n  <View> </View> \n)",
+            "title": "You can omit return statement if only single component is a return"
+        },
+        {
+            "location": "/#full-declaration-here-returned-items-are-mostly-multiple",
+            "text": "const App = () => {\n  return (    \n     <Text> 2nd Way </Text>\n     <Text> 3rd Way </Text>\n  );\n}",
+            "title": "Full declaration, here returned items are mostly multiple"
+        },
+        {
+            "location": "/#redux-simplest-understanding",
+            "text": "There are  4 things  to learn   State : Application's Data.  Action : Plain JavaScript object that tells reducer how to modify the data [State].  Reduce  : The function that takes the action and make changes in State.  Store  : It holds a reference to State and Reducer.   //put images here  /*\n    First we created a reducer, there are 2 arguments we pass\n    1> state is the previous state we got while running reducer \n    2> action is the actual action object\n*/\nconst reducer = (state = [], action) => {\n  if(action === 'split_string'){\n    return action.payload.split('');\n  }\n  return state;\n}\n\n//We need to pass reducer to the store.\nconst store = Redux.createStore(reducer);\n\n//This is the action which must have property type\nconst action = {\n  type : 'split_string',\n  payload : 'reverseBits'\n}\n\n//We need to pass this action to the store\nstore.dispatch(action);\n\n//Any time you write this it will return current state.\nstore.getState();",
+            "title": "Redux - Simplest understanding..."
+        }
+    ]
+}
