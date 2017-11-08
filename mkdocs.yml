@@ -6,7 +6,7 @@ extra:
     accent: 'indigo'
   social:
     - type: 'gitlab'
-      link: 'https://gitlab.com/reverseBitsTech'
+      link: 'https://gitlab.com/reverseBitsTech/react-native-programming-tips'
     - type: 'twitter'
       link: 'https://twitter.com/reverseBitsTech'
     - type: 'linkedin'

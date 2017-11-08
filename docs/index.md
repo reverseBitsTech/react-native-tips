@@ -91,7 +91,6 @@ And now you want to access these both at some place, then use de structuring of 
 This makes code lot **more readable and clean** ;)
 
 
-
 #### At files level
 
 There will be certain times when you have lot of reusable components in your app, de structuring can save lot lines of code here.
@@ -164,8 +163,45 @@ const App = () => {
 
 
 
+
+
 ## Redux - Simplest understanding...
 
-4 things to understand
+There are **4 things** to learn
 
-state, Reducer, Action and 
+1.  **State**: Application's Data.
+2.  **Action**: Plain JavaScript object that tells reducer how to modify the data [State].
+3.  **Reduce** : The function that takes the action and make changes in State.
+4.  **Store** : It holds a reference to State and Reducer.
+
+//put images here
+
+```
+/*
+	First we created a reducer, there are 2 arguments we pass
+	1> state is the previous state we got while running reducer 
+	2> action is the actual action object
+*/
+const reducer = (state = [], action) => {
+  if(action === 'split_string'){
+    return action.payload.split('');
+  }
+  return state;
+}
+
+//We need to pass reducer to the store.
+const store = Redux.createStore(reducer);
+
+//This is the action which must have property type
+const action = {
+  type : 'split_string',
+  payload : 'reverseBits'
+}
+
+//We need to pass this action to the store
+store.dispatch(action);
+
+//Any time you write this it will return current state.
+store.getState();
+```
+
