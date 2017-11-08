@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.languages" content="">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      
+        <link rel="shortcut icon" href="./assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.12.1">
+    
+    
+      
+        <title>React native important lessons</title>
+      
+    
+    
+      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-04ea671600.css">
+      
+        <link rel="stylesheet" href="./assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="React native important lessons" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Home
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </span>
+    React native important lessons
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Home
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uses-of-components-functional-class-components" title="Uses of components: functional, class components" class="md-nav__link">
+    Uses of components: functional, class components
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functional-components" title="Functional components" class="md-nav__link">
+    Functional components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-level-components" title="Class level components" class="md-nav__link">
+    Class level components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-structuring-of-objects" title="De structuring of objects" class="md-nav__link">
+    De structuring of objects
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#at-component-level" title="At component level" class="md-nav__link">
+    At component level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-files-level" title="At files level" class="md-nav__link">
+    At files level
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaring-functional-components-in-different-ways" title="Declaring functional components in different ways..." class="md-nav__link">
+    Declaring functional components in different ways...
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-should-be-in-same-line-if-one-line-is-gonna-return" title="Return should be in same line if One Line is gonna return" class="md-nav__link">
+    Return should be in same line if One Line is gonna return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-omit-return-statement-if-only-single-component-is-a-return" title="You can omit return statement if only single component is a return" class="md-nav__link">
+    You can omit return statement if only single component is a return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-declaration-here-returned-items-are-mostly-multiple" title="Full declaration, here returned items are mostly multiple" class="md-nav__link">
+    Full declaration, here returned items are mostly multiple
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redux-simplest-understanding" title="Redux - Simplest understanding..." class="md-nav__link">
+    Redux - Simplest understanding...
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#uses-of-components-functional-class-components" title="Uses of components: functional, class components" class="md-nav__link">
+    Uses of components: functional, class components
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#functional-components" title="Functional components" class="md-nav__link">
+    Functional components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-level-components" title="Class level components" class="md-nav__link">
+    Class level components
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#de-structuring-of-objects" title="De structuring of objects" class="md-nav__link">
+    De structuring of objects
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#at-component-level" title="At component level" class="md-nav__link">
+    At component level
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#at-files-level" title="At files level" class="md-nav__link">
+    At files level
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaring-functional-components-in-different-ways" title="Declaring functional components in different ways..." class="md-nav__link">
+    Declaring functional components in different ways...
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#return-should-be-in-same-line-if-one-line-is-gonna-return" title="Return should be in same line if One Line is gonna return" class="md-nav__link">
+    Return should be in same line if One Line is gonna return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-omit-return-statement-if-only-single-component-is-a-return" title="You can omit return statement if only single component is a return" class="md-nav__link">
+    You can omit return statement if only single component is a return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-declaration-here-returned-items-are-mostly-multiple" title="Full declaration, here returned items are mostly multiple" class="md-nav__link">
+    Full declaration, here returned items are mostly multiple
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redux-simplest-understanding" title="Redux - Simplest understanding..." class="md-nav__link">
+    Redux - Simplest understanding...
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="important-lessons-learned-while-learning-react-native">Important Lessons learned while learning React Native</h1>
+<h2 id="uses-of-components-functional-class-components">Uses of components: functional, class components</h2>
+<h4 id="functional-components">Functional components</h4>
+<p>When you <strong>just wants to return some JSX</strong> from a component then use functional level component</p>
+<p>Example:</p>
+<pre><code class="jsx">const Button = () =&gt; {  
+    return(
+        &lt;View&gt; click me &lt;/View&gt;
+     );
+}
+</code></pre>
+
+<p>Like here we don't perform any operation other than returning a View.</p>
+<h4 id="class-level-components">Class level components</h4>
+<p>when you wants to use <strong>lifecycle methods and and do complex things</strong> with states, prefer class level components as they are more powerful.</p>
+<pre><code class="jsx">class Button extends Component {
+         // A react lifecycle method...
+         componentWillMount() {
+            //Here do something relative...
+         }
+       render() {
+        return (
+            &lt;View&gt;
+              &lt;Text&gt;
+                &lt;/Text&gt;
+            &lt;/View&gt;
+        );
+    }
+}
+</code></pre>
+
+<h2 id="de-structuring-of-objects">De structuring of objects</h2>
+<h4 id="at-component-level">At component level</h4>
+<p>Whenever you <strong>want to fetch multiple things from a JS object</strong> like you have multiple styles defined inside styles object:</p>
+<pre><code class="jsx">const styles = {
+    viewStyle: {
+        backgroundColor: '#F8F8F8',
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 8,
+        position: 'relative'
+    },
+    textStyle: {
+        fontSize: 20
+    }
+}
+</code></pre>
+
+<p>And now you want to access these both at some place, then use de structuring of objects so instead of writing like this :</p>
+<pre><code class="jsx">&lt;View style={this.styles.viewStyle}&gt;
+     &lt;Text style={this.styles.textStyle}&gt; {props.headerText} &lt;/Text&gt;
+&lt;/View&gt;
+</code></pre>
+
+<ol>
+<li>
+<p>First make a different constant</p>
+<p><code>jsx
+const { textStyle, viewStyle } = styles;</code></p>
+</li>
+<li>
+<p>Use it directly this way, </p>
+<p><code>jsx
+&lt;View style={viewStyle}&gt;
+    &lt;Text style={textStyle}&gt; {props.headerText} &lt;/Text&gt;
+&lt;/View&gt;</code></p>
+</li>
+</ol>
+<p>This makes code lot <strong>more readable and clean</strong> ;)</p>
+<h4 id="at-files-level">At files level</h4>
+<p>There will be certain times when you have lot of reusable components in your app, de structuring can save lot lines of code here.</p>
+<p><strong>STEPS</strong></p>
+<ol>
+<li>
+<p><strong>Make a common directory/package</strong> for all re-usable components and <strong>create an index.js file</strong> inside that directory.</p>
+</li>
+<li>
+<p>Now for each component instead of exporting it like this </p>
+<p><code>jsx
+export default component</code></p>
+</li>
+<li>
+<p><strong>export</strong> it as <strong>an object</strong>.</p>
+<p><code>jsx
+export { Component}</code></p>
+</li>
+<li>
+<p>Inside index.js file what we simply do is <strong>import all the components in same directory and immediately export them</strong>. but with different syntax:</p>
+<p><code>jsx
+export * from './Button';
+export * from './Card';</code></p>
+</li>
+<li>
+<p>Now <strong>whenever you write directory path</strong> in which <strong>any index.js file exists</strong> then it will <strong>by default load data from index file</strong>. That's why we called it index 1st place.</p>
+<p><code>jsx
+import { Card, CardSection, Button, Input, Spinner } from './common'</code></p>
+<p>​</p>
+</li>
+</ol>
+<h2 id="declaring-functional-components-in-different-ways">Declaring functional components in different ways...</h2>
+<p>This below codes are same, You can create components this way</p>
+<h4 id="return-should-be-in-same-line-if-one-line-is-gonna-return">Return should be in same line if One Line is gonna return</h4>
+<pre><code class="jsx">const App = () =&gt; {
+  return &lt;Text&gt; Swesome &lt;/Text&gt;
+}
+</code></pre>
+
+<h4 id="you-can-omit-return-statement-if-only-single-component-is-a-return">You can omit return statement if only single component is a return</h4>
+<pre><code class="jsx">const App = () =&gt; (
+  &lt;View&gt; &lt;/View&gt; 
+)
+</code></pre>
+
+<h4 id="full-declaration-here-returned-items-are-mostly-multiple">Full declaration, here returned items are mostly multiple</h4>
+<pre><code class="jsx">const App = () =&gt; {
+  return (    
+     &lt;Text&gt; 2nd Way &lt;/Text&gt;
+     &lt;Text&gt; 3rd Way &lt;/Text&gt;
+  );
+}
+</code></pre>
+
+<h2 id="redux-simplest-understanding">Redux - Simplest understanding...</h2>
+<p>There are <strong>4 things</strong> to learn</p>
+<ol>
+<li><strong>State</strong>: Application's Data.</li>
+<li><strong>Action</strong>: Plain JavaScript object that tells reducer how to modify the data [State].</li>
+<li><strong>Reduce</strong> : The function that takes the action and make changes in State.</li>
+<li><strong>Store</strong> : It holds a reference to State and Reducer.</li>
+</ol>
+<p>//put images here</p>
+<pre><code>/*
+    First we created a reducer, there are 2 arguments we pass
+    1&gt; state is the previous state we got while running reducer 
+    2&gt; action is the actual action object
+*/
+const reducer = (state = [], action) =&gt; {
+  if(action === 'split_string'){
+    return action.payload.split('');
+  }
+  return state;
+}
+
+//We need to pass reducer to the store.
+const store = Redux.createStore(reducer);
+
+//This is the action which must have property type
+const action = {
+  type : 'split_string',
+  payload : 'reverseBits'
+}
+
+//We need to pass this action to the store
+store.dispatch(action);
+
+//Any time you write this it will return current state.
+store.getState();
+</code></pre>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://gitlab.com/reverseBitsTech/react-native-programming-tips" class="md-footer-social__link fa fa-gitlab"></a>
+    
+      <a href="https://twitter.com/reverseBitsTech" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://in.linkedin.com/in/reversebits-tech-473757131" class="md-footer-social__link fa fa-linkedin"></a>
+    
+      <a href="https://blog.reversebits.tech" class="md-footer-social__link fa fa-medium"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application-946997f430.js"></script>
+      
+      
+      <script>app.initialize({version:"0.16.3",url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
