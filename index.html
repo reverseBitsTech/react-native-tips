@@ -476,8 +476,7 @@
 </li>
 <li>
 <p>Use it directly this way, </p>
-<p><code>jsx
-&lt;View style={viewStyle}&gt;
+<p><code>&lt;View style={viewStyle}&gt;
     &lt;Text style={textStyle}&gt; {props.headerText} &lt;/Text&gt;
 &lt;/View&gt;</code></p>
 </li>
@@ -492,24 +491,20 @@
 </li>
 <li>
 <p>Now for each component instead of exporting it like this </p>
-<p><code>jsx
-export default component</code></p>
+<p><code>export default component</code></p>
 </li>
 <li>
 <p><strong>export</strong> it as <strong>an object</strong>.</p>
-<p><code>jsx
-export { Component}</code></p>
+<p><code>export { Component}</code></p>
 </li>
 <li>
 <p>Inside index.js file what we simply do is <strong>import all the components in same directory and immediately export them</strong>. but with different syntax:</p>
-<p><code>jsx
-export * from './Button';
+<p><code>export * from './Button';
 export * from './Card';</code></p>
 </li>
 <li>
 <p>Now <strong>whenever you write directory path</strong> in which <strong>any index.js file exists</strong> then it will <strong>by default load data from index file</strong>. That's why we called it index 1st place.</p>
-<p><code>jsx
-import { Card, CardSection, Button, Input, Spinner } from './common'</code></p>
+<p><code>import { Card, CardSection, Button, Input, Spinner } from './common'</code></p>
 <p>​</p>
 </li>
 </ol>
