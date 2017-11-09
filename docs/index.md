@@ -76,7 +76,7 @@ And now you want to access these both at some place, then use de structuring of 
 
 1.  First make a different constant
 
-    ```jsx
+    ```
     const { textStyle, viewStyle } = styles;
     ```
 
